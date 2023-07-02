@@ -12,7 +12,7 @@ const typeDefs = readFileSync("./src/schema.graphql", { encoding: "utf-8" });
 // リゾルバを定義する
 const resolvers = {
   Query: {
-    info: () => `This is the API of a Hackernews Clone`,
+    info: () => `github information`,
     feed: async (parent, args, context) => {
       return context.prisma.link.findMany();
     },
